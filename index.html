@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f9a73d7489.js" crossorigin="anonymous"></script>
+    <title>CRUDS PROJ</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <header>
+                <h1>CRUDS</h1>
+                <h3>products management system</h3>
+            </header>
+            <nav>
+                <h2>Total Products : <sapn id="total">0</sapn></h2>
+            </nav>
+        </div>
+        <div class="input-modal">
+            <input type="text" required id="name" name="name" placeholder="Product Name">
+            <div class="backege">
+                <input type="text" required class="half" id="price" name="price" placeholder="Product Price">
+                <input type="text" required class="half" id="taxes" name="taxes" placeholder="Taxes (%)">
+            </div>
+            <div class="backege">
+                <input type="text" required class="half" id="ads" name="ads" placeholder="Ads (%)">
+                <input type="text" required class="half" id="discount" name="discount" placeholder="Discount (%)">
+            </div>
+            <input type="text" required id="category" name="category" placeholder="Product Category">
+            <div class="backege">
+                <input type="number" required class="half" id="count" name="count" placeholder="Count">
+                <button id="submit-btn">Submit</button>
+            </div>
+        </div>
+        <div class="update-modal">
+            <input type="text" required id="name" name="name" placeholder="Product Name">
+            <div class="backege">
+                <input type="text" required class="half" id="price" name="price" placeholder="Product Price">
+                <input type="text" required class="half" id="taxes" name="taxes" placeholder="Taxes (%)">
+            </div>
+            <div class="backege">
+                <input type="text" required class="half" id="ads" name="ads" placeholder="Ads (%)">
+                <input type="text" required class="half" id="discount" name="discount" placeholder="Discount (%)">
+            </div>
+            <input type="text" required id="category" name="category" placeholder="Product Category">
+            <button id="update-btn">Update</button>
+        </div>
+        <div class="output">
+            <div class="actions">
+                <div class="search">
+                    <input type="text" id="search" name="search" placeholder="Search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <select name="searchBy" id="searchBy">
+                        <option value="name">By Name</option>
+                        <option value="category">By Category</option>
+                    </select>
+                </div>
+                <div class="addRem">
+                    <button id="add-btn"><i class="fas fa-plus"></i>Add One</button>
+                    <button id="rem-btn"><i class="fas fa-trash"></i>Delete All</button>
+                </div>
+            </div>
+            <div class="view">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th class="action"></th>
+                    </tr>
+                    <tbody id="case">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="error-modal">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <h2>Failed</h2>
+            <p>Oops! Something went wrong, Please try again later or call our support.</p>
+            <div class="buttons">
+                <button id="confirm-error">Try Again</button>
+                <button id="cancel-error">Cancel</button>
+            </div>
+        </div>
+        <div class="success-modal">
+            <i class="fa-solid fa-check"></i>
+            <h2>Success</h2>
+            <p>Congrats, Your product have been added successfuly.</p>
+            <div class="buttons">
+                <button id="confirm-success">Confirm</button>
+            </div>
+        </div>
+        <div class="warning-modal">
+            <i class="fa fa-warning" aria-hidden="true"></i>
+            <h2>Warning</h2>
+            <p>Be Carful , You are about to delete all products in your store , Are you sure you want to do that?</p>
+            <div class="buttons">
+                <button id="confirm-warning">Delete</button>
+                <button id="cancel-warning">Cancel</button>
+            </div>
+        </div>
+        <div class="cover"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
